@@ -49,3 +49,6 @@ def RegistrarProveedorView(request):
 		return HttpResponseRedirect(reverse('inicio'))
 		
 	return render(request, "registrar_proveedor.html", contexto)
+
+def RegistrarProducto(request):
+	formulario = RegistrarProductoForm(request.POST or None)	

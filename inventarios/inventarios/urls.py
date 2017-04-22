@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^$', views.IniciarSesionView, name = 'iniciar_sesion'),
     url(r'^inicio/', views.InicioView, name = 'inicio'),
     url(r'^lista_tipo_almacen/', views.AlmacenView, name='lista_tipo_almacen'),
+    url(r'^registrar_usuario/', views.RegistrarUsuarioView, name = 'registrar_usuario'),
 ]

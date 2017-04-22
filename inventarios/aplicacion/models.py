@@ -22,7 +22,20 @@ class Almacen(models.Model):
 	direccion = models.TextField()
 	filas = models.IntegerField()
 
+	def __str__(self):
+		return self.direccion
+
 class Clasificacion(models.Model):
 	nombre = models.CharField(max_length = 30)
 	descripcion = models.CharField(max_length = 100)
 
+	def __str__(self):
+		return set.nombre
+
+class Grupo(models.Model):
+	nombre_grupo = models.CharField(max_length = 20)
+	nombre_subgrupo = models.CharField(max_length =20)
+
+	def __str__(self):
+		return self.nombre_grupo
+	

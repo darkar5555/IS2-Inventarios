@@ -4,6 +4,7 @@ from .models import Usuario
 from .models import Proveedor
 from .models import Almacen
 from .models import Clasificacion
+from .models import Grupo
 
 class AdminUsuario(admin.ModelAdmin):
 	list_display = ["__str__", "nombre", "contrasena", "email"]
@@ -36,3 +37,11 @@ class AdminClasificacion(admin.ModelAdmin):
 		model = Clasificacion
 
 admin.site.register(Clasificacion,AdminClasificacion)
+
+class AdminGrupo(admin.ModelAdmin):
+	list_display = ["__str__", "nombre_grupo", "nombre_subgrupo"]
+
+	class Metal:
+		model = Grupo
+
+admin.site.register(Grupo,AdminGrupo)

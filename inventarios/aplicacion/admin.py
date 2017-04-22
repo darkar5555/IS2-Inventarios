@@ -3,6 +3,7 @@ from django.contrib import admin
 from .models import Usuario
 from .models import Proveedor
 from .models import Almacen
+from .models import Clasificacion
 
 class AdminUsuario(admin.ModelAdmin):
 	list_display = ["__str__", "nombre", "contrasena", "email"]
@@ -27,3 +28,11 @@ class AdminAlmacen(admin.ModelAdmin):
 		model = Almacen
 
 admin.site.register(Almacen,AdminAlmacen)
+
+class AdminClasificacion(admin.ModelAdmin):
+	list_display = ["__str__", "nombre", "descripcion"]
+	
+	class Meta:
+		model = Clasificacion
+
+admin.site.register(Clasificacion,AdminClasificacion)

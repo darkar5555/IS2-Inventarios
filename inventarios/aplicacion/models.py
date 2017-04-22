@@ -22,3 +22,7 @@ class Almacen(models.Model):
 	direccion = models.TextField()
 	filas = models.IntegerField()
 
+class Clasificacion(models.Model):
+	nombre = models.CharField(max_length = 30)
+	descripcion = models.CharField(max_length = 100)
+
